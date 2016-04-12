@@ -1,0 +1,100 @@
+@import "@nib-styles/colors";
+@import "@nib-styles/sass-breakpoints";
+@import "@nib-styles/sass-grid";
+@import "@nib-styles/sass-spacing";
+@import "@nib-styles/v2-typography";
+@import "@nib-styles/v2-icons";
+
+.carousel-prompt {
+
+  @include m(3);
+  @include copy($size: small);
+  color: $color-grumpy;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+
+  &__icon {
+    position: relative;
+    top: -1px;
+    @include mr(1);
+    font-style: normal; //TODO: add in v2-icons
+  }
+
+  &__icon--left {
+    @include v2-icon('arrow', $rotate: 180);
+  }
+
+  &__icon--right {
+    @include v2-icon('arrow');
+  }
+
+  @include breakpoint('md') {
+    display: none;
+  }
+}
+
+// Custom breakpoint once three products are fully visible.
+// Disable carousel stuff
+@media (min-width: 750px) {
+
+  .slider-list {
+    transform: none !important;
+    transition: none!important;
+    margin: 0 auto !important;
+  }
+
+  .slider-decorator-0,
+  .slider-decorator-1,
+  .slider-decorator-2 {
+    display: none !important;
+  }
+
+}
+
+.slider-decorator-0,
+.slider-decorator-1 {
+  position: static !important;
+  left: auto !important;
+  top: auto !important;
+  transform: none !important;
+}
+
+.slider-decorator-0 button,
+.slider-decorator-1 button {
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  background: hsla(0, 0%, 100%, .6) !important;
+  top: 30px !important; //84px for highlighted products
+  font-size: 0; // Hide next/prev
+  overflow: hidden;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.slider-decorator-0 button {
+  @include v2-icon('arrow', $size: smaller, $rotate: 180) {
+    padding: 30px 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  };
+  transform: translate(-50%);
+}
+
+.slider-decorator-1 button {
+  @include v2-icon('arrow', $size: smaller) {
+    padding: 30px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  };
+  right: 0;
+  transform: translate(50%);
+}
+
+.slider-decorator-2 {
+  display: none !important;
+}
