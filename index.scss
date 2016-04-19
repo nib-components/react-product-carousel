@@ -64,35 +64,27 @@
 .slider-decorator-0 button,
 .slider-decorator-1 button {
   position: absolute;
-  width: 84px;
+  width: 42px;
   height: 84px;
-  background: hsla(0, 0%, 100%, .6) !important;
   top: 30px !important; //84px for highlighted products
   font-size: 0; // Hide next/prev
   overflow: hidden;
-  border-radius: 50%;
   z-index: 5;
+  background: url('img/carousel-arrow.svg') right no-repeat !important;
+  background-size: cover !important;
+  opacity: .75 !important;
+
+  &:hover {
+    opacity: .95 !important;
+  }
 }
 
 .slider-decorator-0 button {
-  @include v2-icon('arrow', $size: smaller, $rotate: 180) {
-    padding: 30px 10px;
-    position: absolute;
-    top: 0;
-    right: 0;
-  };
-  transform: translate(-50%);
+  transform: rotate(180deg);
 }
 
 .slider-decorator-1 button {
-  @include v2-icon('arrow', $size: smaller) {
-    padding: 30px 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-  };
   right: 0;
-  transform: translate(50%);
 }
 
 .slider-decorator-2 {

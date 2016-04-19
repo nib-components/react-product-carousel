@@ -381,47 +381,24 @@
 .slider-decorator-0 button,
 .slider-decorator-1 button {
   position: absolute;
-  width: 84px;
+  width: 42px;
   height: 84px;
-  background: rgba(255, 255, 255, 0.6) !important;
   top: 30px !important;
   font-size: 0;
   overflow: hidden;
-  border-radius: 50%;
-  z-index: 5; }
+  z-index: 5;
+  background: url("img/carousel-arrow.svg") right no-repeat !important;
+  background-size: cover !important;
+  opacity: .75 !important; }
+  .slider-decorator-0 button:hover,
+  .slider-decorator-1 button:hover {
+    opacity: .95 !important; }
 
 .slider-decorator-0 button {
-  transform: translate(-50%); }
-  .slider-decorator-0 button:before {
-    font-family: 'nibdings';
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    vertical-align: middle;
-    content: "";
-    font-size: 24px;
-    display: inline-block;
-    transform: rotate(180deg);
-    padding: 30px 10px;
-    position: absolute;
-    top: 0;
-    right: 0; }
+  transform: rotate(180deg); }
 
 .slider-decorator-1 button {
-  right: 0;
-  transform: translate(50%); }
-  .slider-decorator-1 button:before {
-    font-family: 'nibdings';
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    vertical-align: middle;
-    content: "";
-    font-size: 24px;
-    padding: 30px 10px;
-    position: absolute;
-    top: 0;
-    left: 0; }
+  right: 0; }
 
 .slider-decorator-2 {
   display: none !important; }
