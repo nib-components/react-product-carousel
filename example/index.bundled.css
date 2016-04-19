@@ -387,7 +387,7 @@
   font-size: 0;
   overflow: hidden;
   z-index: 5;
-  background: url("img/carousel-arrow.svg") right no-repeat !important;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='84px' height='84px' viewBox='0 0 64 64'><path fill='#FFFFFF' d='M32,32c0,17.7,14.3,32,32,32V0C46.3,0,32,14.3,32,32z M49.1,40l-2.1-1.9l4.2-4.1H39v-4h12.2l-4.2-4.1l2.1-2 l7.9,8L49.1,40z'/></svg>") center right no-repeat !important;
   background-size: cover !important;
   opacity: .75 !important; }
   .slider-decorator-0 button:hover,
