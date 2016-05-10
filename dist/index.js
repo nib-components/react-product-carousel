@@ -17,6 +17,10 @@ var _nukaCarousel = require('nuka-carousel');
 
 var _nukaCarousel2 = _interopRequireDefault(_nukaCarousel);
 
+var _carouselArrows = require('./lib/carouselArrows');
+
+var _carouselArrows2 = _interopRequireDefault(_carouselArrows);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ProductCarousel(props) {
@@ -48,6 +52,7 @@ function ProductCarousel(props) {
           slideIndex: 1,
           cellAlign: 'center',
           edgeEasing: 'easeOutSine',
+          decorators: _carouselArrows2.default,
           className: true
         },
         props.children

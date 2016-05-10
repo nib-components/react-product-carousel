@@ -35,43 +35,21 @@
   }
 }
 
-.slider-list {
-  transform: none !important;
-}
-
-// Custom breakpoint once three products are fully visible.
-// Disable carousel stuff
-@media (min-width: 750px) {
-
-  .slider-list {
-    transform: none !important;
-    transition: none!important;
-    margin: 0 auto !important;
-    left: auto !important;
-  }
-
-  .slider-decorator-0,
-  .slider-decorator-1,
-  .slider-decorator-2 {
-    display: none !important;
-  }
-
-}
-
 .slider-decorator-0,
 .slider-decorator-1 {
   position: static !important;
-  left: auto !important;
-  top: auto !important;
-  transform: none !important;
 }
 
-.slider-decorator-0 button,
-.slider-decorator-1 button {
+// Hide pagination
+.slider-decorator-2 {
+  display: none !important;
+}
+
+.carousel__arrow {
   position: absolute;
   width: 42px;
   height: 84px;
-  top: 30px !important; //84px for highlighted products
+  top: 39px !important;
   font-size: 0; // Hide next/prev
   overflow: hidden;
   z-index: 5;
@@ -80,20 +58,38 @@
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4NHB4JyBoZWlnaHQ9Jzg0cHgnIHZpZXdCb3g9JzAgMCA2NCA2NCc+PHBhdGggZmlsbD0nI0ZGRkZGRicgZD0nTTMyLDMyYzAsMTcuNywxNC4zLDMyLDMyLDMyVjBDNDYuMywwLDMyLDE0LjMsMzIsMzJ6IE00OS4xLDQwbC0yLjEtMS45bDQuMi00LjFIMzl2LTRoMTIuMmwtNC4yLTQuMWwyLjEtMiBsNy45LDhMNDkuMSw0MHonLz48L3N2Zz4=") center right no-repeat !important;
   background-size: cover !important;
   opacity: .75 !important;
+  cursor: pointer;
 
   &:hover {
-    opacity: .95 !important;
+    opacity: 1 !important;
   }
+
+  &--prev {
+    transform: rotate(180deg);
+  }
+
+  &--next {
+    right: 0;
+  }
+
 }
 
-.slider-decorator-0 button {
-  transform: rotate(180deg);
+.slider-list {
+  cursor: inherit !important;
 }
 
-.slider-decorator-1 button {
-  right: 0;
-}
+// Custom breakpoint once three products are fully visible.
+// Disable carousel above this point
+@media (min-width: 750px) {
 
-.slider-decorator-2 {
-  display: none !important;
+  .slider-list {
+    transform: none !important;
+    transition: none!important;
+    margin: 0 auto !important;
+  }
+
+  .carousel__arrow {
+    display: none !important;
+  }
+
 }

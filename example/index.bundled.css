@@ -361,48 +361,39 @@
     .carousel-prompt {
       display: none; } }
 
-.slider-list {
-  transform: none !important; }
-
-@media (min-width: 750px) {
-  .slider-list {
-    transform: none !important;
-    transition: none !important;
-    margin: 0 auto !important;
-    left: auto !important; }
-  .slider-decorator-0,
-  .slider-decorator-1,
-  .slider-decorator-2 {
-    display: none !important; } }
-
 .slider-decorator-0,
 .slider-decorator-1 {
-  position: static !important;
-  left: auto !important;
-  top: auto !important;
-  transform: none !important; }
+  position: static !important; }
 
-.slider-decorator-0 button,
-.slider-decorator-1 button {
+.slider-decorator-2 {
+  display: none !important; }
+
+.carousel__arrow {
   position: absolute;
   width: 42px;
   height: 84px;
-  top: 30px !important;
+  top: 39px !important;
   font-size: 0;
   overflow: hidden;
   z-index: 5;
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4NHB4JyBoZWlnaHQ9Jzg0cHgnIHZpZXdCb3g9JzAgMCA2NCA2NCc+PHBhdGggZmlsbD0nI0ZGRkZGRicgZD0nTTMyLDMyYzAsMTcuNywxNC4zLDMyLDMyLDMyVjBDNDYuMywwLDMyLDE0LjMsMzIsMzJ6IE00OS4xLDQwbC0yLjEtMS45bDQuMi00LjFIMzl2LTRoMTIuMmwtNC4yLTQuMWwyLjEtMiBsNy45LDhMNDkuMSw0MHonLz48L3N2Zz4=") center right no-repeat !important;
   background-size: cover !important;
-  opacity: .75 !important; }
-  .slider-decorator-0 button:hover,
-  .slider-decorator-1 button:hover {
-    opacity: .95 !important; }
+  opacity: .75 !important;
+  cursor: pointer; }
+  .carousel__arrow:hover {
+    opacity: 1 !important; }
+  .carousel__arrow--prev {
+    transform: rotate(180deg); }
+  .carousel__arrow--next {
+    right: 0; }
 
-.slider-decorator-0 button {
-  transform: rotate(180deg); }
+.slider-list {
+  cursor: inherit !important; }
 
-.slider-decorator-1 button {
-  right: 0; }
-
-.slider-decorator-2 {
-  display: none !important; }
+@media (min-width: 750px) {
+  .slider-list {
+    transform: none !important;
+    transition: none !important;
+    margin: 0 auto !important; }
+  .carousel__arrow {
+    display: none !important; } }

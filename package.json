@@ -1,6 +1,6 @@
 {
   "name": "@nib-components/react-product-carousel",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "description": "React product carousel.",
   "dependencies": {
     "@nib-styles/colors": "^1.1.1",
@@ -9,7 +9,7 @@
     "@nib-styles/v2-icons": "^2.6.2",
     "@nib-styles/v2-typography": "^4.0.2",
     "classnames": "^2.2.3",
-    "nuka-carousel": "lauriejones/nuka-carousel#b464704fb62bb5a56caa3baecac0588bb6014776"
+    "nuka-carousel": "^1.2.0"
   },
   "devDependencies": {
     "@nib-components/react-product-header": "^0.1.0",
@@ -39,7 +39,7 @@
     ]
   },
   "scripts": {
-    "build": "babel ./index.js -d ./dist --source-maps",
+    "build": "babel ./index.js ./lib/**/*.js -d ./dist --source-maps",
     "example.css.build": "sass-composer index.scss -o example/index.bundled.css",
     "example.js.build": "browserify -v --debug -t babelify example/index.js -o example/index.bundled.js",
     "example.build": "npm run build && npm run example.js.build && npm run example.css.build",

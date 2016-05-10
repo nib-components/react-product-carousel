@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import Carousel from 'nuka-carousel';
+import carouselArrows from './lib/carouselArrows'
 
 export default function ProductCarousel(props) {
 
@@ -26,6 +27,7 @@ export default function ProductCarousel(props) {
           slideIndex={1}
           cellAlign="center"
           edgeEasing="easeOutSine"
+          decorators={carouselArrows}
           className
         >
           {props.children}

@@ -20,8 +20,10 @@ A wrapper around `nuka-carousel` for displaying products at nib.
       </ProductCarousel>,
       document.querySelector('#app')
     );
+    
+Can add a custom className.
 
 ##To Do
 
  - More Doco
- - Improve arrows: https://github.com/kenwheeler/nuka-carousel/issues/22
+ - Tests
