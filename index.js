@@ -29,9 +29,8 @@ export default function ProductCarousel(props) {
           edgeEasing="easeOutSine"
           decorators={carouselArrows}
           className
-        >
-          {props.children}
-        </Carousel>
+          {...props}
+        />
 
       </div>
     </div>

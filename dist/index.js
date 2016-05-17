@@ -3,6 +3,9 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 exports.default = ProductCarousel;
 
 var _react = require('react');
@@ -43,20 +46,16 @@ function ProductCarousel(props) {
     _react2.default.createElement(
       'div',
       { className: 'product-carousel__body' },
-      _react2.default.createElement(
-        _nukaCarousel2.default,
-        {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          slideWidth: '250px',
-          slideIndex: 1,
-          cellAlign: 'center',
-          edgeEasing: 'easeOutSine',
-          decorators: _carouselArrows2.default,
-          className: true
-        },
-        props.children
-      )
+      _react2.default.createElement(_nukaCarousel2.default, _extends({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        slideWidth: '250px',
+        slideIndex: 1,
+        cellAlign: 'center',
+        edgeEasing: 'easeOutSine',
+        decorators: _carouselArrows2.default,
+        className: true
+      }, props))
     )
   );
 }
