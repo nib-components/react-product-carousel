@@ -1,6 +1,6 @@
 {
   "name": "@nib-components/react-product-carousel",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "React product carousel.",
   "dependencies": {
     "@nib-styles/colors": "^1.1.1",
@@ -20,16 +20,16 @@
     "babelify": "^7.2.0",
     "browserify": "^12.0.1",
     "browserify-incremental": "^3.0.1",
-    "react": "^0.14.0",
-    "react-dom": "^0.14.0",
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0",
     "react-testutils-query": "^0.1.1",
     "react-testutils-render": "^0.1.1",
     "readdir": "^0.0.13",
     "sass-composer": "2.0.0-beta12"
   },
   "peerDependencies": {
-    "react": "^0.14.0",
-    "react-dom": "^0.14.0"
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0"
   },
   "browserify": {
     "transform": [
