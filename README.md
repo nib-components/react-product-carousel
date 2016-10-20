@@ -13,17 +13,26 @@ A wrapper around `nuka-carousel` for displaying products at nib.
     import ProductCarousel from '@nib-components/react-product-carousel';
 
     ReactDOM.render(
-      <ProductCarousel>
+      <ProductCarousel prompt="Here is a message">
         <div className="product"/>
         <div className="product"/>
         <div className="product"/>
       </ProductCarousel>,
       document.querySelector('#app')
     );
-    
+
 Can add a custom className.
 
+#Props
+
+Prompt: Default value for prompt is 'Swipe to view our products'
+
 ## Change log
+
+### 0.3.0
+
+- Feature: You can now add a custom prompt with a new 'prompt' attribute added to the Product Carousel tag
+- new prop: 'prompt'
 
 ### 0.2.4
 
