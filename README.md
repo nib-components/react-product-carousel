@@ -23,6 +23,12 @@ A wrapper around `nuka-carousel` for displaying products at nib.
     
 Can add a custom className.
 
+## Change log
+
+### 0.2.3
+
+- fix: Just include the v2-icons mixins, not the full css.
+
 ##To Do
 
  - More Doco

@@ -1,6 +1,6 @@
 {
   "name": "@nib-components/react-product-carousel",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "React product carousel.",
   "dependencies": {
     "@nib-styles/colors": "^1.1.1",

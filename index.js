@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 import Carousel from 'nuka-carousel';
 import carouselArrows from './lib/carouselArrows'
 
