@@ -25,7 +25,7 @@ Can add a custom className.
 
 ## Change log
 
-### 0.2.3
+### 0.2.4
 
 - fix: Just include the v2-icons mixins, not the full css.
 
