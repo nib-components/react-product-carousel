@@ -6,7 +6,7 @@ import ProductHeader from '@nib-components/react-product-header';
 const price = {amount: 22, frequency: 'weekly'};
 
 ReactDOM.render(
-  <ProductCarousel>
+  <ProductCarousel title='Put your hands up for Carousel!'>
     <div className="product-overview">
       <ProductHeader name="Basic Hospital" price={price} type="hospital" index={0}/>
       <div className="product-overview__body"></div>
