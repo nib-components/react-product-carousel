@@ -13,7 +13,7 @@ A wrapper around `nuka-carousel` for displaying products at nib.
     import ProductCarousel from '@nib-components/react-product-carousel';
 
     ReactDOM.render(
-      <ProductCarousel promt="Here is a message">
+      <ProductCarousel prompt="Here is a message">
         <div className="product"/>
         <div className="product"/>
         <div className="product"/>
@@ -22,7 +22,10 @@ A wrapper around `nuka-carousel` for displaying products at nib.
     );
 
 Can add a custom className.
-Default value for prompt is 'Swipe to view our products'
+
+#Props
+
+Prompt: Default value for prompt is 'Swipe to view our products'
 
 ## Change log
 
