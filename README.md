@@ -20,10 +20,16 @@ A wrapper around `nuka-carousel` for displaying products at nib.
       </ProductCarousel>,
       document.querySelector('#app')
     );
-    
+
 Can add a custom className.
 
 ## Change log
+
+### 0.3.0
+
+- Feature: You can now add a custom title with a new 'title' attribute added to the Product Carousel tag
+
+- fix: Just include the v2-icons mixins, not the full css.
 
 ### 0.2.4
 
