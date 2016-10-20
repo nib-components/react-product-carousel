@@ -29,8 +29,6 @@ Can add a custom className.
 
 - Feature: You can now add a custom title with a new 'title' attribute added to the Product Carousel tag
 
-- fix: Just include the v2-icons mixins, not the full css.
-
 ### 0.2.4
 
 - fix: Just include the v2-icons mixins, not the full css.
