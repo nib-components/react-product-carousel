@@ -3,7 +3,7 @@ import Carousel from 'nuka-carousel';
 import carouselArrows from './lib/carouselArrows';
 
 export default function ProductCarousel(props) {
-  const {title} = props;
+  const {prompt} = props;
   return (
 
     <div className="product-carousel">
@@ -13,7 +13,7 @@ export default function ProductCarousel(props) {
           <i className="carousel-prompt__icon carousel-prompt__icon--left"/>
           <i className="carousel-prompt__icon carousel-prompt__icon--right"/>
           {' '}
-          {title}
+          {prompt}
         </div>
       </div>
 
@@ -37,9 +37,9 @@ export default function ProductCarousel(props) {
 }
 
 ProductCarousel.propTypes = {
-  title: React.PropTypes.string
+  prompt: React.PropTypes.string
 };
 
 ProductCarousel.defaultProps = {
-  title: 'Swipe to view our products'
+  prompt: 'Swipe to view our products'
 };
