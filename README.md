@@ -13,13 +13,13 @@ A wrapper around `nuka-carousel` for displaying products at nib.
     import ProductCarousel from '@nib-components/react-product-carousel';
 
     const onBeforeSlide = (currentSlide) => {
-      console.log('before'); // eslint-disable-line
-      console.log(currentSlide); // eslint-disable-line
+      console.log('before');
+      console.log(currentSlide);
     };
 
     const onAfterSlide = (currentSlide) => {
-      console.log('after'); // eslint-disable-line
-      console.log(currentSlide); // eslint-disable-line
+      console.log('after');
+      console.log(currentSlide);
     };
 
     ReactDOM.render(
