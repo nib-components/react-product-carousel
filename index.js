@@ -3,7 +3,8 @@ import Carousel from 'nuka-carousel';
 import carouselArrows from './lib/carouselArrows';
 
 export default function ProductCarousel(props) {
-  const {prompt} = props;
+
+  const {prompt, onAfterSlide, onBeforeSlide} = props;
   return (
 
     <div className="product-carousel">
@@ -26,6 +27,8 @@ export default function ProductCarousel(props) {
           slideIndex={1}
           cellAlign="center"
           edgeEasing="easeOutSine"
+          afterSlide={onAfterSlide}
+          beforeSlide={onBeforeSlide}
           decorators={carouselArrows}
           className
           {...props}
@@ -37,9 +40,13 @@ export default function ProductCarousel(props) {
 }
 
 ProductCarousel.propTypes = {
-  prompt: React.PropTypes.string
+  prompt: React.PropTypes.string,
+  onAfterSlide: React.PropTypes.func,
+  onBeforeSlide: React.PropTypes.func
 };
 
 ProductCarousel.defaultProps = {
-  prompt: 'Swipe to view our products'
+  prompt: 'Swipe to view our products',
+  onAfterSlide: () => {} ,
+  onBeforeSlide: () => {}
 };
