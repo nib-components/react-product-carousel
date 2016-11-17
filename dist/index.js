@@ -23,6 +23,9 @@ var _carouselArrows2 = _interopRequireDefault(_carouselArrows);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ProductCarousel(props) {
+  var prompt = props.prompt;
+  var onAfterSlide = props.onAfterSlide;
+  var onBeforeSlide = props.onBeforeSlide;
 
   return _react2.default.createElement(
     'div',
@@ -36,7 +39,7 @@ function ProductCarousel(props) {
         _react2.default.createElement('i', { className: 'carousel-prompt__icon carousel-prompt__icon--left' }),
         _react2.default.createElement('i', { className: 'carousel-prompt__icon carousel-prompt__icon--right' }),
         ' ',
-        'Swipe to view our products'
+        prompt
       )
     ),
     _react2.default.createElement(
@@ -49,10 +52,24 @@ function ProductCarousel(props) {
         slideIndex: 1,
         cellAlign: 'center',
         edgeEasing: 'easeOutSine',
+        afterSlide: onAfterSlide,
+        beforeSlide: onBeforeSlide,
         decorators: _carouselArrows2.default,
         className: true
       }, props))
     )
   );
 }
+
+ProductCarousel.propTypes = {
+  prompt: _react2.default.PropTypes.string,
+  onAfterSlide: _react2.default.PropTypes.func,
+  onBeforeSlide: _react2.default.PropTypes.func
+};
+
+ProductCarousel.defaultProps = {
+  prompt: 'Swipe to view our products',
+  onAfterSlide: function onAfterSlide() {},
+  onBeforeSlide: function onBeforeSlide() {}
+};
 //# sourceMappingURL=index.js.map

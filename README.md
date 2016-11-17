@@ -41,6 +41,11 @@ onBeforeSlide: function is called before slide with the number of the previous s
 
 ## Change log
 
+### 1.0.0
+
+- Fix: Reduce z-index of arrows
+- Bump to major version for npm `<1.0.0` fix
+
 ### 0.4.0
 
 - Feature: Added onBeforeSlide and onAfterSlide hooks.
