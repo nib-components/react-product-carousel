@@ -41,6 +41,10 @@ onBeforeSlide: function is called before slide with the number of the previous s
 
 ## Change log
 
+### 1.0.1
+
+- Bump version of `sass-grid` to major version.
+
 ### 1.0.0
 
 - Fix: Reduce z-index of arrows

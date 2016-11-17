@@ -57,7 +57,7 @@
   top: 39px !important;
   font-size: 0;
   overflow: hidden;
-  z-index: 5;
+  z-index: 1;
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4NHB4JyBoZWlnaHQ9Jzg0cHgnIHZpZXdCb3g9JzAgMCA2NCA2NCc+PHBhdGggZmlsbD0nI0ZGRkZGRicgZD0nTTMyLDMyYzAsMTcuNywxNC4zLDMyLDMyLDMyVjBDNDYuMywwLDMyLDE0LjMsMzIsMzJ6IE00OS4xLDQwbC0yLjEtMS45bDQuMi00LjFIMzl2LTRoMTIuMmwtNC4yLTQuMWwyLjEtMiBsNy45LDhMNDkuMSw0MHonLz48L3N2Zz4=") center right no-repeat !important;
   background-size: cover !important;
   opacity: .75 !important;
