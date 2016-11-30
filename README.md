@@ -38,8 +38,14 @@ Can add a custom className.
 Prompt: Default value for prompt is 'Swipe to view our products'
 onAfterSlide: function is called after slide with the number of the current slide
 onBeforeSlide: function is called before slide with the number of the previous slide
+hideControls: `bool`. Hide arrows and disable swipe on desktop. Defaults true.
+ghostProducts: `bool`. Show grey boxes at the start and end of the carousel. Defaults false.
 
 ## Change log
+
+### 1.1.0
+
+- Add: `hideControls` and 'ghostProducts' flags
 
 ### 1.0.1
 

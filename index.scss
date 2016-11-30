@@ -80,16 +80,44 @@
 
 // Custom breakpoint once three products are fully visible.
 // Disable carousel above this point
-@media (min-width: 750px) {
 
-  .slider-list {
-    transform: none !important;
-    transition: none!important;
-    margin: 0 auto !important;
+.product-carousel--hide-controls-desktop {
+
+  @media (min-width: 750px) {
+
+    .slider-list {
+      transform: none !important;
+      transition: none!important;
+      margin: 0 auto !important;
+    }
+
+    .carousel__arrow {
+      display: none !important;
+    }
+
   }
 
-  .carousel__arrow {
-    display: none !important;
+}
+
+.product-carousel--ghost-products {
+
+  .slider-list:before,
+  .slider-list:after {
+    content: ' ';
+    background: hsl(0, 0%, 87%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border: 2px dashed hsl(0, 0%, 73%);
+    width: 230px;
+  }
+
+  .slider-list:before {
+    left: -244px;
+  }
+
+  .slider-list:after {
+    right: -244px;
   }
 
 }
