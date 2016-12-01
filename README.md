@@ -45,7 +45,7 @@ ghostProducts: `bool`. Show grey boxes at the start and end of the carousel. Def
 
 ### 1.1.0
 
-- Add: `hideControls` and 'ghostProducts' flags
+- Add: `hideControls` and `ghostProducts` flags
 
 ### 1.0.1
 
