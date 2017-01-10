@@ -28,6 +28,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function ProductCarousel(props) {
   var prompt = props.prompt,
+      slideIndex = props.slideIndex,
       onAfterSlide = props.onAfterSlide,
       onBeforeSlide = props.onBeforeSlide,
       hideControls = props.hideControls,
@@ -62,7 +63,7 @@ function ProductCarousel(props) {
         slidesToShow: 1,
         slidesToScroll: 1,
         slideWidth: '250px',
-        slideIndex: 1,
+        slideIndex: slideIndex,
         cellAlign: 'center',
         edgeEasing: 'easeOutSine',
         afterSlide: onAfterSlide,
@@ -76,6 +77,7 @@ function ProductCarousel(props) {
 
 ProductCarousel.propTypes = {
   prompt: _react2.default.PropTypes.string,
+  slideIndex: _react2.default.PropTypes.number,
   onAfterSlide: _react2.default.PropTypes.func,
   onBeforeSlide: _react2.default.PropTypes.func,
   hideControls: _react2.default.PropTypes.bool,
@@ -84,6 +86,7 @@ ProductCarousel.propTypes = {
 
 ProductCarousel.defaultProps = {
   prompt: 'Swipe to view our products',
+  slideIndex: 1,
   onAfterSlide: function onAfterSlide() {},
   onBeforeSlide: function onBeforeSlide() {},
   hideControls: true,

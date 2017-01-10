@@ -5,7 +5,7 @@ import carouselArrows from './lib/carouselArrows';
 
 export default function ProductCarousel(props) {
 
-  const {prompt, onAfterSlide, onBeforeSlide, hideControls, ghostProducts, className} = props;
+  const {prompt, slideIndex, onAfterSlide, onBeforeSlide, hideControls, ghostProducts, className} = props;
 
   const carouselClasses = classNames(className, 'product-carousel', {
     'product-carousel--hide-controls-desktop': hideControls,
@@ -31,7 +31,7 @@ export default function ProductCarousel(props) {
           slidesToShow={1}
           slidesToScroll={1}
           slideWidth="250px"
-          slideIndex={1}
+          slideIndex={slideIndex}
           cellAlign="center"
           edgeEasing="easeOutSine"
           afterSlide={onAfterSlide}
@@ -48,6 +48,7 @@ export default function ProductCarousel(props) {
 
 ProductCarousel.propTypes = {
   prompt: React.PropTypes.string,
+  slideIndex: React.PropTypes.number,
   onAfterSlide: React.PropTypes.func,
   onBeforeSlide: React.PropTypes.func,
   hideControls: React.PropTypes.bool,
@@ -56,6 +57,7 @@ ProductCarousel.propTypes = {
 
 ProductCarousel.defaultProps = {
   prompt: 'Swipe to view our products',
+  slideIndex: 1,
   onAfterSlide: () => {} ,
   onBeforeSlide: () => {},
   hideControls: true,
