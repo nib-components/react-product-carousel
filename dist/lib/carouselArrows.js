@@ -25,7 +25,7 @@ exports.default = [{
     function LeftArrow() {
       _classCallCheck(this, LeftArrow);
 
-      return _possibleConstructorReturn(this, Object.getPrototypeOf(LeftArrow).apply(this, arguments));
+      return _possibleConstructorReturn(this, (LeftArrow.__proto__ || Object.getPrototypeOf(LeftArrow)).apply(this, arguments));
     }
 
     _createClass(LeftArrow, [{
@@ -61,7 +61,7 @@ exports.default = [{
     function RightArrow() {
       _classCallCheck(this, RightArrow);
 
-      return _possibleConstructorReturn(this, Object.getPrototypeOf(RightArrow).apply(this, arguments));
+      return _possibleConstructorReturn(this, (RightArrow.__proto__ || Object.getPrototypeOf(RightArrow)).apply(this, arguments));
     }
 
     _createClass(RightArrow, [{

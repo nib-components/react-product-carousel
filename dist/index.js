@@ -16,6 +16,10 @@ var _nukaCarousel = require('nuka-carousel');
 
 var _nukaCarousel2 = _interopRequireDefault(_nukaCarousel);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 var _carouselArrows = require('./lib/carouselArrows');
 
 var _carouselArrows2 = _interopRequireDefault(_carouselArrows);
@@ -23,13 +27,23 @@ var _carouselArrows2 = _interopRequireDefault(_carouselArrows);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ProductCarousel(props) {
-  var prompt = props.prompt;
-  var onAfterSlide = props.onAfterSlide;
-  var onBeforeSlide = props.onBeforeSlide;
+  var prompt = props.prompt,
+      slideIndex = props.slideIndex,
+      onAfterSlide = props.onAfterSlide,
+      onBeforeSlide = props.onBeforeSlide,
+      hideControls = props.hideControls,
+      ghostProducts = props.ghostProducts,
+      className = props.className;
+
+
+  var carouselClasses = (0, _classnames2.default)(className, 'product-carousel', {
+    'product-carousel--hide-controls-desktop': hideControls,
+    'product-carousel--ghost-products': ghostProducts
+  });
 
   return _react2.default.createElement(
     'div',
-    { className: 'product-carousel' },
+    { className: carouselClasses },
     _react2.default.createElement(
       'div',
       { className: 'product-carousel__prompt' },
@@ -49,13 +63,13 @@ function ProductCarousel(props) {
         slidesToShow: 1,
         slidesToScroll: 1,
         slideWidth: '250px',
-        slideIndex: 1,
+        slideIndex: slideIndex,
         cellAlign: 'center',
         edgeEasing: 'easeOutSine',
         afterSlide: onAfterSlide,
         beforeSlide: onBeforeSlide,
         decorators: _carouselArrows2.default,
-        className: true
+        className: className
       }, props))
     )
   );
@@ -63,13 +77,19 @@ function ProductCarousel(props) {
 
 ProductCarousel.propTypes = {
   prompt: _react2.default.PropTypes.string,
+  slideIndex: _react2.default.PropTypes.number,
   onAfterSlide: _react2.default.PropTypes.func,
-  onBeforeSlide: _react2.default.PropTypes.func
+  onBeforeSlide: _react2.default.PropTypes.func,
+  hideControls: _react2.default.PropTypes.bool,
+  ghostProducts: _react2.default.PropTypes.bool
 };
 
 ProductCarousel.defaultProps = {
   prompt: 'Swipe to view our products',
+  slideIndex: 1,
   onAfterSlide: function onAfterSlide() {},
-  onBeforeSlide: function onBeforeSlide() {}
+  onBeforeSlide: function onBeforeSlide() {},
+  hideControls: true,
+  ghostProducts: false
 };
 //# sourceMappingURL=index.js.map

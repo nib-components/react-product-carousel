@@ -36,7 +36,7 @@ const onAfterSlide = (currentSlide) => {
 };
 
 ReactDOM.render(
-  <ProductCarousel prompt="Put your hands up for Carousel!" onAfterSlide={onAfterSlide} onBeforeSlide={onBeforeSlide}>
+  <ProductCarousel prompt="Put your hands up for Carousel!" onAfterSlide={onAfterSlide} onBeforeSlide={onBeforeSlide} className="custom-class" ghostProducts>
     <div className="product-overview">
       <ProductHeader name="Basic Hospital" price={price} type="hospital" index={0}/>
       <div className="product-overview__body"></div>

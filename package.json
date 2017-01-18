@@ -1,6 +1,6 @@
 {
   "name": "@nib-components/react-product-carousel",
-  "version": "1.0.1",
+  "version": "1.1.0-preview.4",
   "description": "React product carousel.",
   "dependencies": {
     "@nib-styles/colors": "^1.1.1",
@@ -8,8 +8,8 @@
     "@nib-styles/sass-spacing": "^1.0.0",
     "@nib-styles/v2-icons": "^2.6.2",
     "@nib-styles/v2-typography": "^4.0.2",
-    "classnames": "^2.2.3",
-    "nuka-carousel": "^1.2.0"
+    "classnames": "^2.2.5",
+    "nuka-carousel": "git+https://github.com/lauriejones/nuka-carousel"
   },
   "devDependencies": {
     "@nib-components/react-product-header": "^0.1.0",
