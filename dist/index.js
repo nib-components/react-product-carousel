@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+exports.GhostProduct = GhostProduct;
 exports.default = ProductCarousel;
 
 var _react = require('react');
@@ -26,19 +27,28 @@ var _carouselArrows2 = _interopRequireDefault(_carouselArrows);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function GhostProduct(props) {
+  var children = props.children;
+
+  return _react2.default.createElement(
+    'div',
+    { className: 'ghost-product' },
+    children
+  );
+}
+
 function ProductCarousel(props) {
   var prompt = props.prompt,
       slideIndex = props.slideIndex,
       onAfterSlide = props.onAfterSlide,
       onBeforeSlide = props.onBeforeSlide,
       hideControls = props.hideControls,
-      ghostProducts = props.ghostProducts,
-      className = props.className;
+      className = props.className,
+      children = props.children;
 
 
   var carouselClasses = (0, _classnames2.default)(className, 'product-carousel', {
-    'product-carousel--hide-controls-desktop': hideControls,
-    'product-carousel--ghost-products': ghostProducts
+    'product-carousel--hide-controls-desktop': hideControls
   });
 
   return _react2.default.createElement(
@@ -59,18 +69,22 @@ function ProductCarousel(props) {
     _react2.default.createElement(
       'div',
       { className: 'product-carousel__body' },
-      _react2.default.createElement(_nukaCarousel2.default, _extends({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        slideWidth: '250px',
-        slideIndex: slideIndex,
-        cellAlign: 'center',
-        edgeEasing: 'easeOutSine',
-        afterSlide: onAfterSlide,
-        beforeSlide: onBeforeSlide,
-        decorators: _carouselArrows2.default,
-        className: className
-      }, props))
+      _react2.default.createElement(
+        _nukaCarousel2.default,
+        _extends({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          slideWidth: '250px',
+          slideIndex: slideIndex,
+          cellAlign: 'center',
+          edgeEasing: 'easeOutSine',
+          afterSlide: onAfterSlide,
+          beforeSlide: onBeforeSlide,
+          decorators: _carouselArrows2.default,
+          className: className
+        }, props),
+        children
+      )
     )
   );
 }
@@ -80,8 +94,7 @@ ProductCarousel.propTypes = {
   slideIndex: _react2.default.PropTypes.number,
   onAfterSlide: _react2.default.PropTypes.func,
   onBeforeSlide: _react2.default.PropTypes.func,
-  hideControls: _react2.default.PropTypes.bool,
-  ghostProducts: _react2.default.PropTypes.bool
+  hideControls: _react2.default.PropTypes.bool
 };
 
 ProductCarousel.defaultProps = {
@@ -89,7 +102,6 @@ ProductCarousel.defaultProps = {
   slideIndex: 1,
   onAfterSlide: function onAfterSlide() {},
   onBeforeSlide: function onBeforeSlide() {},
-  hideControls: true,
-  ghostProducts: false
+  hideControls: true
 };
 //# sourceMappingURL=index.js.map

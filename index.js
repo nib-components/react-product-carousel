@@ -3,13 +3,21 @@ import Carousel from 'nuka-carousel';
 import classNames from 'classnames';
 import carouselArrows from './lib/carouselArrows';
 
+export function GhostProduct(props) {
+  const {children} = props;
+  return (
+    <div className="ghost-product">
+      {children}
+    </div>
+  );
+}
+
 export default function ProductCarousel(props) {
 
-  const {prompt, slideIndex, onAfterSlide, onBeforeSlide, hideControls, ghostProducts, className} = props;
+  const {prompt, slideIndex, onAfterSlide, onBeforeSlide, hideControls, className, children} = props;
 
   const carouselClasses = classNames(className, 'product-carousel', {
-    'product-carousel--hide-controls-desktop': hideControls,
-    'product-carousel--ghost-products': ghostProducts
+    'product-carousel--hide-controls-desktop': hideControls
   });
 
   return (
@@ -39,7 +47,9 @@ export default function ProductCarousel(props) {
           decorators={carouselArrows}
           className={className}
           {...props}
-        />
+        >
+          {children}
+        </Carousel>
 
       </div>
     </div>
@@ -51,8 +61,7 @@ ProductCarousel.propTypes = {
   slideIndex: React.PropTypes.number,
   onAfterSlide: React.PropTypes.func,
   onBeforeSlide: React.PropTypes.func,
-  hideControls: React.PropTypes.bool,
-  ghostProducts: React.PropTypes.bool
+  hideControls: React.PropTypes.bool
 };
 
 ProductCarousel.defaultProps = {
@@ -60,6 +69,5 @@ ProductCarousel.defaultProps = {
   slideIndex: 1,
   onAfterSlide: () => {} ,
   onBeforeSlide: () => {},
-  hideControls: true,
-  ghostProducts: false
+  hideControls: true
 };
