@@ -61,7 +61,8 @@
   font-size: 0;
   overflow: hidden;
   z-index: 1;
-  cursor: pointer; }
+  cursor: pointer;
+  pointer-events: auto; }
   .carousel__arrow--prev {
     left: -1px; }
   .carousel__arrow--next {
@@ -70,7 +71,8 @@
 
 .semicircle {
   fill: #fff;
-  transition: fill ease-in-out .2s; }
+  stroke: transparent;
+  transition: stroke ease-in-out .2s; }
 
 .arrow {
   fill: #444;
@@ -85,11 +87,12 @@
 .carousel__arrow:active .semicircle {
   fill: #ddd; }
 
-.stuck-arrows .semicircle {
-  fill: #444; }
-
-.stuck-arrows .arrow {
-  fill: #fff; }
+.stuck-arrows {
+  height: 124px;
+  pointer-events: none;
+  z-index: 1; }
+  .stuck-arrows .semicircle {
+    stroke: #444; }
 
 .slider-list {
   cursor: inherit !important; }

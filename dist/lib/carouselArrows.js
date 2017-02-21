@@ -35,17 +35,17 @@ exports.default = [{
       value: function render() {
         return _react2.default.createElement(
           _reactSticky.Sticky,
-          { stickyClassName: 'stuck-arrows' },
+          { stickyClassName: 'stuck-arrows', bottomOffset: 20 },
           _react2.default.createElement(
             'div',
             {
               style: this.styleArrow(this.props.currentSlide === 0),
               className: 'carousel__arrow carousel__arrow--prev',
-              onClick: this.props.previousSlide },
-            '>',
+              onClick: this.props.previousSlide
+            },
             _react2.default.createElement(
               'svg',
-              { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 50.9 101.2' },
+              { xmlns: 'http://www.w3.org/2000/svg', viewBox: '-1 -1 54 108' },
               _react2.default.createElement(
                 'title',
                 null,
@@ -92,17 +92,17 @@ exports.default = [{
       value: function render() {
         return _react2.default.createElement(
           _reactSticky.Sticky,
-          { stickyClassName: 'stuck-arrows' },
+          { stickyClassName: 'stuck-arrows', bottomOffset: 20 },
           _react2.default.createElement(
             'div',
             {
               style: this.styleArrow(this.props.currentSlide === this.props.slideCount - 1),
               className: 'carousel__arrow carousel__arrow--next',
-              onClick: this.props.nextSlide },
-            '>',
+              onClick: this.props.nextSlide
+            },
             _react2.default.createElement(
               'svg',
-              { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 50.9 101.2' },
+              { xmlns: 'http://www.w3.org/2000/svg', viewBox: '-1 -1 54 108' },
               _react2.default.createElement(
                 'title',
                 null,

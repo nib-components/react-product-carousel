@@ -55,6 +55,7 @@
   overflow: hidden;
   z-index: 1;
   cursor: pointer;
+  pointer-events: auto;
 
   &--prev {
     left: -1px;
@@ -69,7 +70,8 @@
 
 .semicircle {
   fill: $color-white;
-  transition: fill ease-in-out .2s;
+  stroke: transparent;
+  transition: stroke ease-in-out .2s;
 }
 
 .arrow {
@@ -98,13 +100,12 @@
 }
 
 .stuck-arrows {
+  height: 124px;
+  pointer-events: none;
+  z-index: 1;
 
   .semicircle {
-    fill: $color-doc;
-  }
-
-  .arrow {
-    fill: $color-white;
+    stroke: $color-doc;
   }
 
 }
