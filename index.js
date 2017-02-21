@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousel from 'nuka-carousel';
 import classNames from 'classnames';
+import {StickyContainer} from 'react-sticky';
 import carouselArrows from './lib/carouselArrows';
 
 export function GhostProduct(props) {
@@ -35,21 +36,25 @@ export default function ProductCarousel(props) {
 
       <div className="product-carousel__body">
 
-        <Carousel
-          slidesToShow={1}
-          slidesToScroll={1}
-          slideWidth="250px"
-          slideIndex={slideIndex}
-          cellAlign="center"
-          edgeEasing="easeOutSine"
-          afterSlide={onAfterSlide}
-          beforeSlide={onBeforeSlide}
-          decorators={carouselArrows}
-          className={className}
-          {...props}
-        >
-          {children}
-        </Carousel>
+        <StickyContainer>
+
+          <Carousel
+            slidesToShow={1}
+            slidesToScroll={1}
+            slideWidth="250px"
+            slideIndex={slideIndex}
+            cellAlign="center"
+            edgeEasing="easeOutSine"
+            afterSlide={onAfterSlide}
+            beforeSlide={onBeforeSlide}
+            decorators={carouselArrows}
+            className={className}
+            {...props}
+          >
+            {children}
+          </Carousel>
+
+        </StickyContainer>
 
       </div>
     </div>

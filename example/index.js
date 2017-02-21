@@ -46,6 +46,8 @@ ReactDOM.render(
     onBeforeSlide={onBeforeSlide}
     className="custom-class"
     ghostProducts
+    hideControls={false}
+    slideIndex={2}
   >
     <GhostProduct>
       <h3>Can't find what you're looking for?</h3>

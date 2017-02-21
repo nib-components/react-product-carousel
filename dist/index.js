@@ -21,6 +21,8 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
+var _reactSticky = require('react-sticky');
+
 var _carouselArrows = require('./lib/carouselArrows');
 
 var _carouselArrows2 = _interopRequireDefault(_carouselArrows);
@@ -70,20 +72,24 @@ function ProductCarousel(props) {
       'div',
       { className: 'product-carousel__body' },
       _react2.default.createElement(
-        _nukaCarousel2.default,
-        _extends({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          slideWidth: '250px',
-          slideIndex: slideIndex,
-          cellAlign: 'center',
-          edgeEasing: 'easeOutSine',
-          afterSlide: onAfterSlide,
-          beforeSlide: onBeforeSlide,
-          decorators: _carouselArrows2.default,
-          className: className
-        }, props),
-        children
+        _reactSticky.StickyContainer,
+        null,
+        _react2.default.createElement(
+          _nukaCarousel2.default,
+          _extends({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            slideWidth: '250px',
+            slideIndex: slideIndex,
+            cellAlign: 'center',
+            edgeEasing: 'easeOutSine',
+            afterSlide: onAfterSlide,
+            beforeSlide: onBeforeSlide,
+            decorators: _carouselArrows2.default,
+            className: className
+          }, props),
+          children
+        )
       )
     )
   );
