@@ -35,16 +35,16 @@ Can add a custom className.
 
 #Props
 
-#### Prompt: 
+#### Prompt:
 
 Default value for prompt is 'Swipe to view our products'
 
-#### onAfterSlide: 
+#### onAfterSlide:
 
 function is called after slide with the number of the current slide
 
 
-#### onBeforeSlide: 
+#### onBeforeSlide:
 
 function is called before slide with the number of the previous slide
 
@@ -52,11 +52,16 @@ function is called before slide with the number of the previous slide
 
 `bool`. Hide arrows and disable swipe on desktop. Defaults true.
 
-#### ghostProducts: 
+#### ghostProducts:
 
 `bool`. Show grey boxes at the start and end of the carousel. Defaults false.
 
 ## Change log
+
+## 2.0.0
+
+- Editable `ghostProducts`
+- Breaking change in `v2-icons`
 
 ### 1.1.0
 

@@ -1,13 +1,13 @@
 {
   "name": "@nib-components/react-product-carousel",
-  "version": "1.1.0-preview.8",
+  "version": "2.1.0",
   "description": "React product carousel.",
   "dependencies": {
     "@nib-styles/colors": "^1.1.1",
     "@nib-styles/sass-grid": "^1.0.0",
     "@nib-styles/sass-spacing": "^1.0.0",
-    "@nib-styles/v2-icons": "^2.6.2",
-    "@nib-styles/v2-typography": "^4.0.2",
+    "@nib-styles/v2-icons": "^3.0.0",
+    "@nib-styles/v2-typography": "^5.0.0",
     "classnames": "^2.2.5",
     "nuka-carousel": "git+https://github.com/lauriejones/nuka-carousel",
     "react-sticky": "^5.0.5"
@@ -40,14 +40,7 @@
     ]
   },
   "scripts": {
-    "build": "babel ./index.js ./lib/**/*.js -d ./dist --source-maps",
-    "example.css.build": "sass-composer index.scss -o example/index.bundled.css",
-    "example.js.build": "browserify -v --debug -t babelify example/index.js -o example/index.bundled.js",
-    "example.build": "npm run build && npm run example.js.build && npm run example.css.build",
-    "prepublish": "npm run example.build"
-  },
-  "directories": {
-    "example": "example"
+    "build": "babel ./index.js ./lib/**/*.js -d ./dist --source-maps"
   },
   "main": "./dist/index.js",
   "repository": {
