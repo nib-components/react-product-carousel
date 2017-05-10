@@ -2,6 +2,8 @@
   "name": "@nib-components/react-product-carousel",
   "version": "2.1.0",
   "description": "React product carousel.",
+  "main": "./dist/index.js",
+  "main.scss": "./dist/index.scss",
   "dependencies": {
     "@nib-styles/colors": "^1.1.1",
     "@nib-styles/sass-grid": "^1.0.0",
@@ -21,6 +23,7 @@
     "babelify": "^7.2.0",
     "browserify": "^12.0.1",
     "browserify-incremental": "^3.0.1",
+    "cpx": "^1.3.2",
     "react": "^0.14.0 || ^15.0.0",
     "react-dom": "^0.14.0 || ^15.0.0",
     "react-testutils-query": "^0.1.1",
@@ -40,9 +43,10 @@
     ]
   },
   "scripts": {
-    "build": "babel ./index.js ./lib/**/*.js -d ./dist --source-maps"
+    "build:scripts": "babel ./index.js ./lib/**/*.js -d ./dist --source-maps",
+    "build:styles": "cpx ./*.scss ./dist",
+    "build": "npm run build:scripts && npm run build:styles"
   },
-  "main": "./dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nib-components/react-product-carousel.git"
