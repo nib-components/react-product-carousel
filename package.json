@@ -1,6 +1,6 @@
 {
   "name": "@nib-components/react-product-carousel",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "React product carousel.",
   "main": "./dist/index.js",
   "main.scss": "./dist/index.scss",

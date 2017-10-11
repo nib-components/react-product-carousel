@@ -52,11 +52,23 @@ function is called before slide with the number of the previous slide
 
 `bool`. Hide arrows and disable swipe on desktop. Defaults true.
 
+#### hideControlsAt:
+
+`number`. Either `750` or `1000`. To be used in conjunction with `hideControls`. If `hideControls={true}`, defaults to 750.
+
 #### ghostProducts:
 
 `bool`. Show grey boxes at the start and end of the carousel. Defaults false.
 
 ## Change log
+
+## 2.2.0
+
+- Additional `hideControlsAt` prop to choose at which point to disable carousel functionality
+
+## 2.1.0
+
+- Sticky carousel arrows
 
 ## 2.0.0
 

@@ -45,12 +45,14 @@ function ProductCarousel(props) {
       onAfterSlide = props.onAfterSlide,
       onBeforeSlide = props.onBeforeSlide,
       hideControls = props.hideControls,
+      hideControlsAt = props.hideControlsAt,
       className = props.className,
       children = props.children;
 
 
   var carouselClasses = (0, _classnames2.default)(className, 'product-carousel', {
-    'product-carousel--hide-controls-desktop': hideControls
+    'product-carousel--hide-controls-750': hideControls && hideControlsAt === 750,
+    'product-carousel--hide-controls-1000': hideControls && hideControlsAt === 1000
   });
 
   return _react2.default.createElement(
@@ -100,7 +102,8 @@ ProductCarousel.propTypes = {
   slideIndex: _react2.default.PropTypes.number,
   onAfterSlide: _react2.default.PropTypes.func,
   onBeforeSlide: _react2.default.PropTypes.func,
-  hideControls: _react2.default.PropTypes.bool
+  hideControls: _react2.default.PropTypes.bool,
+  hideControlsAt: _react2.default.PropTypes.oneOf([750, 1000])
 };
 
 ProductCarousel.defaultProps = {
@@ -108,6 +111,7 @@ ProductCarousel.defaultProps = {
   slideIndex: 1,
   onAfterSlide: function onAfterSlide() {},
   onBeforeSlide: function onBeforeSlide() {},
-  hideControls: true
+  hideControls: true,
+  hideControlsAt: 750
 };
 //# sourceMappingURL=index.js.map
