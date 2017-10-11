@@ -15,10 +15,11 @@ export function GhostProduct(props) {
 
 export default function ProductCarousel(props) {
 
-  const {prompt, slideIndex, onAfterSlide, onBeforeSlide, hideControls, className, children} = props;
+  const {prompt, slideIndex, onAfterSlide, onBeforeSlide, hideControls, hideControlsAt, className, children} = props;
 
   const carouselClasses = classNames(className, 'product-carousel', {
-    'product-carousel--hide-controls-desktop': hideControls
+    'product-carousel--hide-controls-750': hideControls && hideControlsAt === 750,
+    'product-carousel--hide-controls-1000': hideControls && hideControlsAt === 1000
   });
 
   return (
@@ -66,7 +67,8 @@ ProductCarousel.propTypes = {
   slideIndex: React.PropTypes.number,
   onAfterSlide: React.PropTypes.func,
   onBeforeSlide: React.PropTypes.func,
-  hideControls: React.PropTypes.bool
+  hideControls: React.PropTypes.bool,
+  hideControlsAt: React.PropTypes.oneOf([750, 1000])
 };
 
 ProductCarousel.defaultProps = {
@@ -74,5 +76,6 @@ ProductCarousel.defaultProps = {
   slideIndex: 1,
   onAfterSlide: () => {} ,
   onBeforeSlide: () => {},
-  hideControls: true
+  hideControls: true,
+  hideControlsAt: 750
 };

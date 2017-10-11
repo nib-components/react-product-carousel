@@ -113,12 +113,30 @@
   cursor: inherit !important;
 }
 
-// Custom breakpoint once three products are fully visible.
+// Custom breakpoints once three or four products are fully visible.
 // Disable carousel above this point
 
-.product-carousel--hide-controls-desktop {
+.product-carousel--hide-controls-750 {
 
   @media (min-width: 750px) {
+
+    .slider-list {
+      transform: none !important;
+      transition: none!important;
+      margin: 0 auto !important;
+    }
+
+    .carousel__arrow {
+      display: none !important;
+    }
+
+  }
+
+}
+
+.product-carousel--hide-controls-1000 {
+
+  @media (min-width: 1000px) {
 
     .slider-list {
       transform: none !important;
